@@ -3,224 +3,179 @@ body {
     font-family: "微软雅黑";
 }
 
-#viewport {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+#header {
+    height: 100px;
+}
+
+#header div {
+    display: inline-flex;
+    vertical-align: middle;
+    line-height: 100px;
+    text-align: center;
 }
 
 #logo {
-    width: 200px;
-    height: 100px;
-    text-align: center;
-    line-height: 100px;
-}
-
-#logo img {
-    vertical-align: middle;
-}
-
-#menu {
-    position: absolute;
-    top: 0px;
-    left: 200px;
-    right: 0px;
-    height: 100px;
-    color: black;
+    padding-left: 20px;
 }
 
 #menu ul {
     list-style: none;
     margin: 0px;
-    font-size: 20px;
+    line-height: 100px;
 }
 
 #menu ul li {
     float: left;
-    line-height: 100px;
-    height:100px;
-	width:150px;
-	margin-top:-7px;
-	padding:0 5px 0 5px;
-	text-align:center;
+    margin-right: 20px;
 }
 
-#menu ul li a{
+#menu ul li a {
+    text-decoration: none;
     color: black;
+    font-size: 18px;
+}
+
+.login, .signup {
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.login {
+    background-color: #00aeef;
+    margin-right: 20px;
+}
+
+.signup {
+    background-color: grey;
+}
+
+.signup:hover {
+    background-color: #00aeef;
+}
+
+.how-to-work{
+    margin: 40px 0 80;
+    text-align: center;
+
+}
+
+.howwork {
+    width: 250px;
+    padding: 50px 0 70px;
+    border-bottom: solid #00aeef 3px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.howwork:hover {
+    background-color: #00aeef;
+}
+
+.howwork h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.page-title {
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+}
+
+.page-title span {
+    color: #00adef;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.tb-logo {
+    width: 70px;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    vertical-align: middle;
+    border-top: 0px;
+    padding: 15px;
+}
+
+.table tr td h4 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.job-type {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.table>tbody>tr>td.tbl-logo {
+    padding-right: 0px;
+}
+
+.table tr td a {
+    color: WHITE;
+    background-color: #00AEEF;
+    padding: 12px 15px;
+    border-radius: 5px;
     text-decoration: none;
 }
-.active{
-	border-bottom:solid 7px #00aeef;text-align:center;
-}
-.login{
-	background-color:#00aeef;
-	margin-right:20px;
+
+.tb-line {
+    background-color: #f9f9f9;
 }
 
-.login , .signup{
-	color:white;
-	width:100px;
-	height:40px;
-	border:0px;
-	cursor:pointer;
-	font-size:16px;
-	border-radius:3px;
-}
-
-.signup{
-	background-color:grey;
-	
-}
-.signup:hover{
-	background-color:#00aeef;
-}
-
-#content {
-    position: relative;
-    left: 0px;
-    right: 0px;
-}
-
-.keywords{
-	width:200px;
-	height:40px;
-	font-size:14px;
-	border-radius:2px;
-	border:1px solid #ccc;
-	margin-top:20px;
-	margin-right:10px;
-}
-
-.keywords:focus{
-	border-color:#66afe9;
-	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-	box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-	outline:0;
-}
-
-#btn-search{
-	background-color:#00aeef;
-	color:white;
-	width:100px;
-	height:40px;
-	border-radius:1px;
-	border:0;
-	padding:6px 12px;
-	cursor:pointer;
-}
-
-.howwork{
-	width:400px;
-	height:450px;
-	display: inline-block;
-	padding:20px;
-	border-bottom:solid #00aeef 3px;
-	margin:20px;
-}
-.howwork:hover{
-	background-color:#00aeef;
-}
-
-#jobs{
-	width:1170px;
-	margin:0 auto 0 auto;
-}
-
-.page-title{
-	font-weight:800;
-	font-size:25px;
-	text-align:center;
-}
-
-.page-title span{
-	color:#00adef;
-}
-
-table{
-	border-spacing:0px;
-	border-collapse:collapse;
-}
-.table{
-	width:100%;
-	max-width:100%;
-	margin-bottom:10px;
-}
-.tb-logo{
-	width:70px;
-}
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
-	vertical-align:middle;	
-	border-top:0px;
-	padding:15px;
-}
-
-.table tr td h4{
-	font-weight:700;
-	font-size:18px;
-}
-.job-type{
-	font-weight:300;
-	font-size:14px;
-}
-
-.table > tbody > tr > td.tbl-logo{
-	padding-right:0px;
-}
-
-.table tr td a{
-	color:WHITE;
-	background-color:#00AEEF;
-	padding:12px 15px;
-	border-radius:5px;
-	text-decoration:none;
+.tb-line2 {
+    background-color: #F4FFFF;
 }
 
 #footer {
-	position:absolute;
-    left: 0px;
-    right: 0px;
     background-color: black;
     color: white;
     font-size: 12px;
-    padding: 10px;
-}
-
-#footer a {
-    color: grey;
-    text-decoration: none;
-}
-
-#company {
-    width: 200px;
-    float: left;
-}
-
-#sitemap{
-    list-style: none;
-    width: 100px;
-	float:left;
-}
-
-#stiemap li {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#links {
-    list-style: none;
-    float: left;
-}
-
-#links li {
-    margin-left: auto;
-    margin-right: auto;
+    padding: 12px;
+    text-align: center;
+    border-top: 4px solid #00AEEF;
 }
 
 #copyright {
     text-align: center;
-	position:absolute;
-	left:0px;
-	right:0px;
-	bottom:10px;
+}
+
+#footer div ul li a {
+    text-decoration: none;
+    color: gray;
+    font-size: 14px;
+}
+
+#usefulLink ul {
+    list-style: none;
+}
+
+#sitemap ul {
+    list-style: none;
+}
+
+.footer-column {
+    width: 33.3%;
+    float: left;
+    font-size: 14px;
 }

@@ -3,15 +3,13 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>黑色极简</title>
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="style2.css" />
     <script type="text/javascript" src="../JavaScript/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../JavaScript/slider.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             var slider = new Slider({
                 renderTo: "slider",
-				height:750,
                 images: [{
                     src: "Image/slider-image-1.jpg"
                 }, {
@@ -20,21 +18,198 @@
                     src: "Image/slider-image-3.jpg"
                 }]
             });
-            //slider.setWidth(100);
-            //alert(slider.getWidth());
         });
     </script>
 </head>
 
 <body>
-    <div id="viewport">
-        <div id="header">
-            <div id="logo">
-                <img src="Image/logo.png" />
+    <div id="header" class="container">
+        <div id="logo">
+            <img src="Image/logo.png" />
+        </div>
+        <div id="menu">
+            <ul>
+                <li class="active">
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="index.html">职位搜索</a>
+                </li>
+                <li>
+                    <a href="index.html">校园招聘</a>
+                </li>
+                <li>
+                    <a href="index.html">证件办理</a>
+                </li>
+                <li>
+                    <a href="index.html">校园风采</a>
+                </li>
+                <li>
+                    <a href="index.html">关于我们</a>
+                </li>
+                <li style="width:300px;">
+                    <button class="login">登录</button>
+                    <button class="signup">注册</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div id="slider"></div>
+        <div class="container">
+            <div class="how-to-work">
+                <div class="footer-column">
+                    <div class="howwork">
+                        <img src="Image/how-work1.png" />
+                        <h3>培训机构</h3>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="howwork">
+                        <img src="Image/how-work2.png" />
+                        <h3>证件办理</h3>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="howwork">
+                        <img src="Image/how-work3.png" />
+                        <h3>教师招聘</h3>
+                    </div>
+                </div>
             </div>
-            <div id="menu">
+        </div>
+        <div id="jobs" class="container">
+            
+            <div class="page-title">
+                <h2>
+                    <span>54712</span>个岗位在等你</h2>
+            </div>
+            <table class="table">
+                <tbody>
+                    <tr class="tb-line">
+                        <td class="tb-logo">
+                            <img src="Image/job-logo1.png" />
+                        </td>
+                        <td class="tb-title">
+                            <h4>英语教师
+                                <br/>
+                                <span class="job-type">全职</span>
+                            </h4>
+                        </td>
+                        <td>
+                            北京大学
+                        </td>
+                        <td>海淀区</td>
+                        <td>￥40000</td>
+                        <td>
+                            <a href="javascript:;">申请职位</a>
+                        </td>
+                    </tr>
+                    <tr class="tb-line2">
+                        <td class="tb-logo">
+                            <img src="Image/job-logo1.png" />
+                        </td>
+                        <td class="tb-title">
+                            <h4>英语教师
+                                <br/>
+                                <span class="job-type">全职</span>
+                            </h4>
+                        </td>
+                        <td>
+                            北京大学
+                        </td>
+                        <td>海淀区</td>
+                        <td>￥40000</td>
+                        <td>
+                            <a href="javascript:;">申请职位</a>
+                        </td>
+                    </tr>
+                    <tr class="tb-line">
+                        <td class="tb-logo">
+                            <img src="Image/job-logo1.png" />
+                        </td>
+                        <td class="tb-title">
+                            <h4>英语教师
+                                <br/>
+                                <span class="job-type">全职</span>
+                            </h4>
+                        </td>
+                        <td>
+                            北京大学
+                        </td>
+                        <td>海淀区</td>
+                        <td>￥40000</td>
+                        <td>
+                            <a href="javascript:;">申请职位</a>
+                        </td>
+                    </tr>
+                    <tr class="tb-line2">
+                        <td class="tb-logo">
+                            <img src="Image/job-logo1.png" />
+                        </td>
+                        <td class="tb-title">
+                            <h4>英语教师
+                                <br/>
+                                <span class="job-type">全职</span>
+                            </h4>
+                        </td>
+                        <td>
+                            北京大学
+                        </td>
+                        <td>海淀区</td>
+                        <td>￥40000</td>
+                        <td>
+                            <a href="javascript:;">申请职位</a>
+                        </td>
+                    </tr>
+                    <tr class="tb-line">
+                        <td class="tb-logo">
+                            <img src="Image/job-logo1.png" />
+                        </td>
+                        <td class="tb-title">
+                            <h4>英语教师
+                                <br/>
+                                <span class="job-type">全职</span>
+                            </h4>
+                        </td>
+                        <td>
+                            北京大学
+                        </td>
+                        <td>海淀区</td>
+                        <td>￥40000</td>
+                        <td>
+                            <a href="javascript:;">申请职位</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div id="company" class="footer-column">
+                <img src="Image/logo.png" />
+                <p>
+                    电话:xxx-xxxxxxxx
+                    <br/> 地址:xx省xx市xx区xx路xx号
+                    <br /> 邮箱：xxxxxx@xxxx.xxx
+                </p>
+            </div>
+            <div id="usefulLink" class="footer-column">
                 <ul>
-                    <li class="active">
+                    <li>友情链接</li>
+                    <li>
+                        <a href="http://www.zhaopin.com">智联招聘</a>
+                    </li>
+                    <li>
+                        <a href="http://www.51job.com">前程无忧</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="sitemap" class="footer-column">
+                <ul>
+                    <li>网站导航</li>
+                    <li>
                         <a href="index.html">首页</a>
                     </li>
                     <li>
@@ -44,7 +219,7 @@
                         <a href="index.html">校园招聘</a>
                     </li>
                     <li>
-                        <a href="index.html">在线办证</a>
+                        <a href="index.html">证件办理</a>
                     </li>
                     <li>
                         <a href="index.html">校园风采</a>
@@ -52,161 +227,10 @@
                     <li>
                         <a href="index.html">关于我们</a>
                     </li>
-                    <li style="width:300px;"><button class="login">登录</button><button class="signup">注册</button></li>
                 </ul>
             </div>
         </div>
-        <div id="content">
-            <div id="slider"></div>
-            <div style="text-align:center; margin:0 auto 0 auto">
-                <div class="howwork"><img src="Image/how-work1.png"/></div>
-                <div class="howwork"><img src="Image/how-work2.png"/></div>
-                <div class="howwork"><img src="Image/how-work3.png"/></div>
-            </div>
-            <div id="jobs">
-            	<div class="page-title">
-                	<h2><span>54712</span>个岗位在等你</h2>
-                </div>
-                <div style="text-align:center">
-                <input class="keywords" placeholder="输入关键字" type="text" />
-                <select class="keywords">
-                	<option>选择地点</option>
-                    <option>北京</option>
-                    <option>北京</option>
-                    <option>北京</option>
-                </select>
-                <select class="keywords">
-                	<option>选择职位</option>
-                    <option>教师</option>
-                </select>
-                <input id="btn-search" type="submit" value="搜索职位" /></div>
-            	<table class="table">
-                	<tbody>
-                    	<tr>
-                        	<td class="tb-logo">
-                            	<img src="Image/job-logo1.png"/>
-                            </td>
-                            <td class="tb-title">
-                            	<h4>英语教师<br/>
-                                <span class="job-type">全职</span>
-                                </h4>                              
-                            </td>
-                            <td>
-                            	北京大学
-                            </td>
-                            <td>海淀区</td>
-                            <td>￥40000</td>
-                            <td><a href="javascript:;">申请职位</a></td>
-                        </tr>
-                        <tr>
-                        	<td class="tb-logo">
-                            	<img src="Image/job-logo1.png"/>
-                            </td>
-                            <td class="tb-title">
-                            	<h4>英语教师<br/>
-                                <span class="job-type">全职</span>
-                                </h4>                              
-                            </td>
-                            <td>
-                            	北京大学
-                            </td>
-                            <td>海淀区</td>
-                            <td>￥40000</td>
-                            <td><a href="javascript:;">申请职位</a></td>
-                        </tr>
-                        <tr>
-                        	<td class="tb-logo">
-                            	<img src="Image/job-logo1.png"/>
-                            </td>
-                            <td class="tb-title">
-                            	<h4>英语教师<br/>
-                                <span class="job-type">全职</span>
-                                </h4>                              
-                            </td>
-                            <td>
-                            	北京大学
-                            </td>
-                            <td>海淀区</td>
-                            <td>￥40000</td>
-                            <td><a href="javascript:;">申请职位</a></td>
-                        </tr>
-                        <tr>
-                        	<td class="tb-logo">
-                            	<img src="Image/job-logo1.png"/>
-                            </td>
-                            <td class="tb-title">
-                            	<h4>英语教师<br/>
-                                <span class="job-type">全职</span>
-                                </h4>                              
-                            </td>
-                            <td>
-                            	北京大学
-                            </td>
-                            <td>海淀区</td>
-                            <td>￥40000</td>
-                            <td><a href="javascript:;">申请职位</a></td>
-                        </tr>
-                        <tr>
-                        	<td class="tb-logo">
-                            	<img src="Image/job-logo1.png"/>
-                            </td>
-                            <td class="tb-title">
-                            	<h4>英语教师<br/>
-                                <span class="job-type">全职</span>
-                                </h4>                              
-                            </td>
-                            <td>
-                            	北京大学
-                            </td>
-                            <td>海淀区</td>
-                            <td>￥40000</td>
-                            <td><a href="javascript:;">申请职位</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div id="footer">
-        <div style="width:1170px;margin-left:auto;margin-right:auto;">
-            <div id="company">
-                <img src="Image/logo.png" />
-                <br /> 地址：xx省xx市xx区xx路xx号
-                <br/> 电话：xxx-xxxxxxxx
-                <br /> 邮箱：xxxxxx@xxxx.xxx
-            </div>
-            <ul id="sitemap">
-                <li>网站导航</li>
-                <li>
-                        <a href="index.html">首页</a>
-                    </li>
-                    <li>
-                        <a href="index.html">职位搜索</a>
-                    </li>
-                    <li>
-                        <a href="index.html">校园招聘</a>
-                    </li>
-                    <li>
-                        <a href="index.html">在线办证</a>
-                    </li>
-                    <li>
-                        <a href="index.html">校园风采</a>
-                    </li>
-                    <li>
-                        <a href="index.html">关于我们</a>
-                    </li>
-            </ul>
-            <ul id="links">
-                <li>友情链接</li>
-                <li>
-                    <a href="http://www.zhaopin.com">智联招聘</a>
-                </li>
-                <li>
-                    <a href="http://www.51job.com">前程无忧</a>
-                </li>
-            </ul>
-            <div id="copyright">Copyright &copy; 2017 EllenZhao</div>
-        </div>
-        </div>
+        <div id="copyright">Copyright &copy; 2017 EllenZhao</div>
     </div>
 </body>
 
