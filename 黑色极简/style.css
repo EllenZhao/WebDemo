@@ -43,12 +43,18 @@ body {
 }
 
 #menu ul li a {
+    display: block;
     text-decoration: none;
     color: black;
     font-size: 18px;
 }
 
-.active{
+#menu ul li a:hover {
+    border-bottom: #00AEEF 5px solid;
+    width: 100%;
+}
+
+.active {
     border-bottom: #00AEEF 5px solid;
 }
 
@@ -112,6 +118,7 @@ body {
     box-sizing: border-box;
     display: inline-block;
     vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
     margin-right: 10px;
     padding: 6px 12px;
     font-size: 14px;
@@ -123,6 +130,20 @@ body {
     text-align: center;
 }
 
+.page-title h5{
+    text-align: center;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-bottom: 0
+}
+
+.page-title h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 5px;
+    text-transform: uppercase;
+  }
+
 .page-title span {
     color: #00adef;
 }
@@ -133,8 +154,10 @@ table {
 }
 
 .table {
-    width: 100%;
+    width: 75%;
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
 }
 
@@ -162,12 +185,38 @@ table {
     padding-right: 0px;
 }
 
+.table tr td p {
+    font-size: 13px
+}
+
+.table tr td p i {
+    color: #00AEEF;
+}
+
+.table tr:hover td p i {
+    color: #0486B7
+}
+
 .table tr td a {
     color: WHITE;
     background-color: #00AEEF;
     padding: 12px 15px;
     border-radius: 5px;
     text-decoration: none;
+    font-size: 13px;
+}
+
+.table tr:hover {
+    background: #00AEEF
+}
+
+.table tr:hover td a {
+    background: #0486B7
+}
+
+.table tr:hover td a:hover {
+    background: #fff;
+    color: #00AEEF
 }
 
 .tb-line {
@@ -178,6 +227,31 @@ table {
     background-color: #F4FFFF;
 }
 
+.more-jobs {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.more-jobs a {
+    background: none repeat scroll 0 0 #d1d1d1;
+    color: #666666;
+    padding: 14px 22px;
+    border-radius: 2px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.more-jobs a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+.more-jobs i {
+    margin-right: 10px;
+    font-size: 16px
+}
+
 #footer {
     background-color: black;
     color: white;
@@ -185,6 +259,7 @@ table {
     padding: 12px;
     text-align: center;
     border-top: 4px solid #00AEEF;
+    margin-top: 20px;
 }
 
 #copyright {

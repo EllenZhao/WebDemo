@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8" />
+    <title>招聘首页</title>
     <link type="text/css" rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
     <script type="text/javascript" src="../JavaScript/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../JavaScript/slider.js"></script>
     <script type="text/javascript">
@@ -29,8 +32,8 @@
         </div>
         <div id="menu">
             <ul>
-                <li class="active">
-                    <a href="index.html">首页</a>
+                <li>
+                    <a href="index.html" class="active">首页</a>
                 </li>
                 <li>
                     <a href="index.html">职位搜索</a>
@@ -45,7 +48,7 @@
                     <a href="index.html">校园风采</a>
                 </li>
                 <li>
-                    <a href="index.html">关于我们</a>
+                    <a href="aboutUs.html">关于我们</a>
                 </li>
                 <li>
                     <button class="login">登录</button>
@@ -72,23 +75,26 @@
                 </div>
             </div>
         </div>
-        <hr/>
+        <hr>
         <div id="jobs" class="container">
-            <div style="text-align:center;">
-                <input type="text" class="search-input" />
+            <div class="page-title">
+                <h5>最新职位</h5>
+                <h2>
+                    <span>54712</span>个职位在等你</h2>
+            </div>
+            <div style="text-align:center;margin-bottom:10px;">
+                <input type="text" class="search-input" placeholder="请输入关键字" />
                 <select class="search-input">
-                    <option>请选择</option>
+                    <option>请选择工作地</option>
                     <option>北京</option>
+                    <option>西安</option>
                 </select>
                 <select class="search-input">
-                    <option>请选择</option>
-                    <option>保安</option>
+                    <option>请选择类别</option>
+                    <option>教师</option>
+                    <option>行政管理</option>
                 </select>
                 <button class="login" style="vertical-align:middle">搜索</button>
-            </div>
-            <div class="page-title">
-                <h2>
-                    <span>54712</span>个岗位在等你</h2>
             </div>
             <table class="table">
                 <tbody>
@@ -103,17 +109,22 @@
                             </h4>
                         </td>
                         <td>
-                            北京大学
+                            <p>北京大学</p>
                         </td>
-                        <td>海淀区</td>
-                        <td>￥40000</td>
+                        <td>
+                            <p>
+                                <i class="icon-location"></i>海淀区</p>
+                        </td>
+                        <td>
+                            <p>￥40000</p>
+                        </td>
                         <td>
                             <a href="javascript:;">申请职位</a>
                         </td>
                     </tr>
                     <tr class="tb-line2">
                         <td class="tb-logo">
-                            <img src="Image/job-logo1.png" />
+                            <img src="Image/job-logo2.png" />
                         </td>
                         <td class="tb-title">
                             <h4>英语教师
@@ -122,17 +133,22 @@
                             </h4>
                         </td>
                         <td>
-                            北京大学
+                            <p>北京大学</p>
                         </td>
-                        <td>海淀区</td>
-                        <td>￥40000</td>
+                        <td>
+                            <p>
+                                <i class="icon-location"></i>海淀区</p>
+                        </td>
+                        <td>
+                            <p>￥40000</p>
+                        </td>
                         <td>
                             <a href="javascript:;">申请职位</a>
                         </td>
                     </tr>
                     <tr class="tb-line">
                         <td class="tb-logo">
-                            <img src="Image/job-logo1.png" />
+                            <img src="Image/job-logo3.png" />
                         </td>
                         <td class="tb-title">
                             <h4>英语教师
@@ -141,17 +157,22 @@
                             </h4>
                         </td>
                         <td>
-                            北京大学
+                            <p>北京大学</p>
                         </td>
-                        <td>海淀区</td>
-                        <td>￥40000</td>
+                        <td>
+                            <p>
+                                <i class="icon-location"></i>海淀区</p>
+                        </td>
+                        <td>
+                            <p>￥40000</p>
+                        </td>
                         <td>
                             <a href="javascript:;">申请职位</a>
                         </td>
                     </tr>
                     <tr class="tb-line2">
                         <td class="tb-logo">
-                            <img src="Image/job-logo1.png" />
+                            <img src="Image/job-logo4.png" />
                         </td>
                         <td class="tb-title">
                             <h4>英语教师
@@ -160,17 +181,22 @@
                             </h4>
                         </td>
                         <td>
-                            北京大学
+                            <p>北京大学</p>
                         </td>
-                        <td>海淀区</td>
-                        <td>￥40000</td>
+                        <td>
+                            <p>
+                                <i class="icon-location"></i>海淀区</p>
+                        </td>
+                        <td>
+                            <p>￥40000</p>
+                        </td>
                         <td>
                             <a href="javascript:;">申请职位</a>
                         </td>
                     </tr>
                     <tr class="tb-line">
                         <td class="tb-logo">
-                            <img src="Image/job-logo1.png" />
+                            <img src="Image/job-logo5.png" />
                         </td>
                         <td class="tb-title">
                             <h4>英语教师
@@ -179,16 +205,25 @@
                             </h4>
                         </td>
                         <td>
-                            北京大学
+                            <p>北京大学</p>
                         </td>
-                        <td>海淀区</td>
-                        <td>￥40000</td>
+                        <td>
+                            <p>
+                                <i class="icon-location"></i>海淀区</p>
+                        </td>
+                        <td>
+                            <p>￥40000</p>
+                        </td>
                         <td>
                             <a href="javascript:;">申请职位</a>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div class="more-jobs">
+                <a href="">
+                    <i class="fa fa-refresh"></i>更多工作</a>
+            </div>
         </div>
     </div>
     <div id="footer">
