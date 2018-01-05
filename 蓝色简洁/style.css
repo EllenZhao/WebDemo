@@ -1,0 +1,85 @@
+body {
+    margin: 0px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#header {
+    -moz-column-count: 2;
+    /* Firefox */
+    -webkit-column-count: 2;
+    /* Safari 和 Chrome */
+    column-count: 3;
+    -moz-column-gap: 10px;
+    /* Firefox */
+    -webkit-column-gap: 10px;
+    /* Safari 和 Chrome */
+    column-gap: 10px;
+}
+
+#logo {
+    padding: 20px 0;
+    float: pagetoright;
+    width: 3gr;
+}
+
+#logo img {
+    vertical-align: middle;
+    float: pagetoright;
+    width: 3gr;
+    padding: 10px 5px;
+}
+
+#search {
+    width: 500px;
+    text-align: center;
+    column-span: 2;
+    padding: 10px 0px;
+}
+
+#keywords {
+    width: 400px;
+    height: 30px;
+    border: 1px solid gray;
+    margin: 6px auto;
+    padding: 0px 3px;
+}
+
+#menu {
+    height: 30px;
+    margin: 0 auto;
+    background-color: blue;
+    column-span: all;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0px;
+}
+
+#menu ul li {
+    float: left;
+    line-height: 30px;
+    margin: 0 10px;
+}
+
+#menu ul li a {
+    text-align: center;
+    text-decoration: none;
+    padding: 0px 10px;
+    color: white;
+    display: inline-block;
+}
+
+#menu ul li a:hover {
+    background-color: rgb(127, 168, 255);
+}
+
+#content {
+    margin: 0px;
+}
+
+#footer {
+    background-color: blue;
+}

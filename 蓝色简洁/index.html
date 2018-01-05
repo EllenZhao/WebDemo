@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>蓝色简洁</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="../JavaScript/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../JavaScript/slider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var slider = new Slider({
+                renderTo: "slider",
+                images: [{
+                    src: "../黑色极简/Image/slider-image-1.jpg",
+                    url: "#"
+                }]
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="Image/logo_20jubilee_116x46.png" />
+            <img src="Image/slogen.png" />
+        </div>
+        <div id="search">
+            <input id="keywords" type="text" />
+            <button>搜索</button>
+        </div>
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="#">校园招聘</a>
+                </li>
+                <li>
+                    <a href="#">证件办理</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div id="slider"></div>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>
