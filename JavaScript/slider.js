@@ -57,62 +57,6 @@ if (typeof jQuery == "undefined") {
                 "position": "relative"
             });
 
-            sliderTarget.append("<div id='preBtn'>&lt;</div>")
-            var preBtn = $("#preBtn");
-            preBtn.css({
-                "width": "50px",
-                "height": "100px",
-                "background-color": "black",
-                "opacity": "0.5",
-                "position": "absolute",
-                "left": "0px",
-                "top": "50%",
-                "color": "white",
-                "text-align": "center",
-                "line-height": "100px",
-                "font-size": "30px",
-                "cursor": "pointer",
-                "margin-top": "-50px"
-            });
-
-            preBtn.click(function () {
-                clearInterval(timer);
-                currentIndex--;
-                animate(currentIndex);
-                timer = setInterval(function () {
-                    currentIndex++;
-                    animate(currentIndex);
-                }, displayTime);
-            });
-
-            sliderTarget.append("<div id='nextBtn'>&gt;</div>")
-            var nextBtn = $("#nextBtn");
-            nextBtn.css({
-                "width": "50px",
-                "height": "100px",
-                "background-color": "black",
-                "opacity": "0.5",
-                "position": "absolute",
-                "right": "0px",
-                "top": "50%",
-                "color": "white",
-                "text-align": "center",
-                "line-height": "100px",
-                "font-size": "30px",
-                "cursor": "pointer",
-                "margin-top": "-50px"
-            });
-
-            nextBtn.click(function () {
-                clearInterval(timer);
-                currentIndex++;
-                animate(currentIndex);
-                timer = setInterval(function () {
-                    currentIndex++;
-                    animate(currentIndex);
-                }, displayTime);
-            });
-
             //小圆点层
             sliderTarget.append("<div id='index-panel'></div>")
             var indexPanel = $("#index-panel");
@@ -127,10 +71,19 @@ if (typeof jQuery == "undefined") {
 
             //添加图片
             for (var i = 0; i < images.length; i++) {
-                var img = "<img src='" + images[i].src + "' />";
+                var img = "", a = "";
+                if (typeof images[i].url != "undefined") {
+                    a = "<a href='" + images[i].url + "' target='blank'></a>"
+                }
+                img += "<img src='" + images[i].src + "' />";
                 sliderList.append("<li class='slider-panel' data-index=" + i + "></li>")
                 var sliderPanel = $(".slider-panel:last");
-                sliderPanel.append(img);
+                if (a != "") {
+                    sliderPanel.append(a);
+                    $("a:last").append(img);
+                } else {
+                    sliderPanel.append(img);
+                }
                 indexPanel.append("<span data-index=" + i + "></span>");
                 var sliderBtn = $("#index-panel span");
                 sliderBtn.css({
@@ -146,26 +99,6 @@ if (typeof jQuery == "undefined") {
                 $("#index-panel span:first").css("background-color", "red");
             }
 
-            $(".slider-panel").hover(function () {
-                clearInterval(timer);
-                //$(".slider-panel").css("cursor","pointer");
-            }, function () {
-                timer = setInterval(function () {
-                    currentIndex++;
-                    animate(currentIndex);
-                }, displayTime);
-            });
-
-            $("#index-panel span").click(function (e) {
-                clearInterval(timer);
-                currentIndex = e.target.getAttribute("data-index");
-                animate(currentIndex);
-                timer = setInterval(function () {
-                    currentIndex++;
-                    animate(currentIndex);
-                }, displayTime);
-            });
-
             function animate(index) {
                 if (currentIndex == images.length) {
                     currentIndex = 0;
@@ -177,10 +110,90 @@ if (typeof jQuery == "undefined") {
                 indexPanel.find("span").css("background-color", "gray").eq(currentIndex).css("background-color", "red")
             }
 
-            var timer = setInterval(function () {
-                currentIndex++;
-                animate(currentIndex);
-            }, displayTime);
+            var timer;
+            if (images.length > 1) {
+                sliderTarget.append("<div id='preBtn'>&lt;</div>")
+                var preBtn = $("#preBtn");
+                preBtn.css({
+                    "width": "50px",
+                    "height": "100px",
+                    "background-color": "black",
+                    "opacity": "0.5",
+                    "position": "absolute",
+                    "left": "0px",
+                    "top": "50%",
+                    "color": "white",
+                    "text-align": "center",
+                    "line-height": "100px",
+                    "font-size": "30px",
+                    "cursor": "pointer",
+                    "margin-top": "-50px"
+                });
+
+                sliderTarget.append("<div id='nextBtn'>&gt;</div>")
+                var nextBtn = $("#nextBtn");
+                nextBtn.css({
+                    "width": "50px",
+                    "height": "100px",
+                    "background-color": "black",
+                    "opacity": "0.5",
+                    "position": "absolute",
+                    "right": "0px",
+                    "top": "50%",
+                    "color": "white",
+                    "text-align": "center",
+                    "line-height": "100px",
+                    "font-size": "30px",
+                    "cursor": "pointer",
+                    "margin-top": "-50px"
+                });
+
+                timer = setInterval(function () {
+                    currentIndex++;
+                    animate(currentIndex);
+                }, displayTime);
+
+                $(".slider-panel").hover(function () {
+                    clearInterval(timer);
+                    //$(".slider-panel").css("cursor","pointer");
+                }, function () {
+                    timer = setInterval(function () {
+                        currentIndex++;
+                        animate(currentIndex);
+                    }, displayTime);
+                });
+
+                $("#index-panel span").click(function (e) {
+                    clearInterval(timer);
+                    currentIndex = e.target.getAttribute("data-index");
+                    animate(currentIndex);
+                    timer = setInterval(function () {
+                        currentIndex++;
+                        animate(currentIndex);
+                    }, displayTime);
+                });
+
+                //下一张按钮单击事件
+                nextBtn.click(function () {
+                    clearInterval(timer);
+                    currentIndex++;
+                    animate(currentIndex);
+                    timer = setInterval(function () {
+                        currentIndex++;
+                        animate(currentIndex);
+                    }, displayTime);
+                });
+
+                preBtn.click(function () {
+                    clearInterval(timer);
+                    currentIndex--;
+                    animate(currentIndex);
+                    timer = setInterval(function () {
+                        currentIndex++;
+                        animate(currentIndex);
+                    }, displayTime);
+                });
+            }
 
             //隐藏除第一张以外的所有图片
             $(".slider-panel:not(:first)").hide();
